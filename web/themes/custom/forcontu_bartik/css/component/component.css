@@ -1,0 +1,176 @@
+/* component.css — componentes reutilizables */
+
+/* Lista con viñetas cuadradas */
+.week-list ul {
+  list-style-type: square;
+  margin: 0;
+  padding: 1em;
+  background: url("../images/pattern.png") repeat;
+  background-size: 50px 50px;
+  opacity: 0.2;
+}
+
+/* Festivos en rojo */
+.week-list li.holiday {
+  color: red;
+  font-weight: bold;
+}
+
+/* Tabla personalizada */
+.custom-table thead {
+  background-color: rgba(0, 128, 255, 0.6);
+  color: #fff;
+}
+
+/* Enlace específico */
+.drupal-link {
+  color: #005f99;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.drupal-link:hover {
+  color: #fff;
+  background-color: #005f99;
+}
+
+/* Palabra "drupal" */
+.drupal-word {
+  background-color: blue;
+  color: white;
+  text-transform: capitalize;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Usuario anónimo: imagen con transparencia */
+.user-logged-out .node--type-article .field--type-image img {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.user-logged-out .node--type-article .field--type-image img:hover {
+  opacity: 1;
+}
+
+/* Selectores avanzados en artículos */
+.node--type-article .field--name-body p:first-of-type {
+  color: green;
+}
+
+.node--type-article .field--name-body p:nth-of-type(3) {
+  color: red;
+}
+
+.node--type-article .field--name-body p::first-line {
+  font-size: 2em;
+}
+
+.node--type-article .field--name-body p::first-letter {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.node--type-article .field--name-body p:last-of-type::before {
+  content: "Y para terminar: ";
+  background-color: black;
+  color: white;
+  padding: 2px 4px;
+  margin-right: 5px;
+}
+
+/* Formularios */
+form input[type="text"],
+form input[type="date"],
+form input[type="password"],
+form input[type="url"] {
+  background-color: #f0f8ff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  transition: all 0.2s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form input[type="password"]:focus,
+form input[type="url"]:focus {
+  background-color: #e6ffe6;
+  border-color: #4CAF50;
+  outline: none;
+}
+
+form textarea {
+  background-color: #fff8e1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  resize: none;
+}
+
+form select {
+  background-color: #e6f0ff;
+  border: 1px solid #666;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Botón submit del bloque de búsqueda */
+#block-forcontu-bartik-search .form-submit {
+  display: inline-block;
+  width: 50px;
+  background-color: #005f99;
+  background-image: url("../images/search-icon.png");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px 20px;
+  color: white;
+  padding: 6px 10px 6px 35px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#block-forcontu-bartik-search .form-submit:hover {
+  background-color: #007acc;
+}
+
+/* Leer más — solo en la portada (cubre distintas convenciones de clase en <body>) */
+.path-front .node--teaser .node__readmore a,
+.front .node--teaser .node__readmore a,
+body.path-front .node--teaser .node__readmore a {
+  color: #005f99;      /* color solicitado */
+  font-size: 1.2rem;   /* tamaño aumentado */
+}
+
+/* 7.3a a) Bloques resaltados */
+.block--highlighted .block__title {
+  color: red;
+  border-bottom: 2px solid red;
+  padding-bottom: 2px;
+  margin-bottom: 0.5em;
+}
+
+/* 7.3a b) Campos resaltados */
+.field--highlighted {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fafafa;
+}
+

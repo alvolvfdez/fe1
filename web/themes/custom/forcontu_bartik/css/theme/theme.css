@@ -1,0 +1,28 @@
+/* theme.css — estilos temáticos / visuales */
+
+:root {
+  --brand-color: #005f99;
+  --brand-accent: #007acc;
+  --brand-highlight: #4CAF50;
+}
+
+/* Aplicar variables de color */
+.drupal-link {
+  color: var(--brand-color);
+}
+
+.drupal-link:hover {
+  background-color: var(--brand-color);
+}
+
+form button[type="submit"] {
+  background-color: var(--brand-highlight);
+}
+
+#block-forcontu-bartik-search .form-submit {
+  background-color: var(--brand-color);
+}
+
+#block-forcontu-bartik-search .form-submit:hover {
+  background-color: var(--brand-accent);
+}

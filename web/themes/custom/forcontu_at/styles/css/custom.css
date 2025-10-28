@@ -1,0 +1,13 @@
+/**
+ * Custom CSS
+ * Use this file to override styles if you feel uncomfortable editing
+ * component stylesheets.
+ ============================================================================ */
+
+ .pr-header__header-first {
+  flex: 0 0 75%;
+ }
+
+ .pr-header__header-second {
+  flex: 0 0 25%;
+ }
