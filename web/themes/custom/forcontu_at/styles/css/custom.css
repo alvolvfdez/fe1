@@ -4,10 +4,65 @@
  * component stylesheets.
  ============================================================================ */
 
- .pr-header__header-first {
-  flex: 0 0 75%;
- }
+.pr-header__header-first {
+flex: 0 0 75%;
+}
 
- .pr-header__header-second {
-  flex: 0 0 25%;
- }
+.pr-header__header-second {
+flex: 0 0 25%;
+}
+
+/**
+ * Reordenar layout principal: sidebars a la izquierda del contenido.
+ * Sidebar first (col 1), Sidebar second (col 2), Content (col 3).
+ * Ajusta los selectores si tu markup difiere.
+ */
+
+/* Contenedor principal en grid */
+#main,
+.layout-content,
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr; /* SF, SS, Content */
+  gap: 2rem;
+}
+
+/* Forzar orden de columnas por región */
+#main .region-sidebar-first,
+.layout-content .region-sidebar-first,
+.main-content .region-sidebar-first {
+  grid-column: 1;
+}
+
+#main .region-sidebar-second,
+.layout-content .region-sidebar-second,
+.main-content .region-sidebar-second {
+  grid-column: 2;
+}
+
+#main .region-content,
+.layout-content .region-content,
+.main-content .region-content {
+  grid-column: 3;
+}
+
+/* Responsive: colapsar en una columna en pantallas medianas/pequeñas */
+@media (max-width: 992px) {
+  #main,
+  .layout-content,
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  #main .region-sidebar-first,
+  #main .region-sidebar-second,
+  #main .region-content,
+  .layout-content .region-sidebar-first,
+  .layout-content .region-sidebar-second,
+  .layout-content .region-content,
+  .main-content .region-sidebar-first,
+  .main-content .region-sidebar-second,
+  .main-content .region-content {
+    grid-column: 1;
+  }
+}
