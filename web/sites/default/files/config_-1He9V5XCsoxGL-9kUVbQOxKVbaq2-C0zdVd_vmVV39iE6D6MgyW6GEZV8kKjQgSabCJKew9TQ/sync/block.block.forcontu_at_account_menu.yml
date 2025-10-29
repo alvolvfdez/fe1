@@ -1,0 +1,27 @@
+uuid: f7b9c6f5-8134-4030-b2fb-0aa4a8118d07
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: JRlrSn0KEPp3Peput6nLm3QJsOOJcAVF-Dcb02UM1DA
+id: forcontu_at_account_menu
+theme: forcontu_at
+region: leaderboard
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

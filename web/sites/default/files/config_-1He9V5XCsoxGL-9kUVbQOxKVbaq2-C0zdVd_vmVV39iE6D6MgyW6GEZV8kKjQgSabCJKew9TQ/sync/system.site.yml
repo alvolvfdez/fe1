@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: es
+uuid: 10c396ff-b57b-4e27-b4e8-84c31a29caef
+name: 'Experto en Front End'
+mail: aolvera@hiberus.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: es
+mail_notification: null

@@ -1,0 +1,22 @@
+uuid: 0270309d-b22e-41e1-bf84-c247afeb5052
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: 3wV-8WzENa5lVh3Ah1PrjOzkUANvgV8XaHbux7KeAdM
+id: forcontu_bartik_local_tasks
+theme: forcontu_bartik
+region: content
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

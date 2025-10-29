@@ -1,0 +1,23 @@
+uuid: bb2037fa-efb5-4f39-977f-16ce8e5aef83
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: EdLeMaejadpKPCYQGAhVw0nIAKn-IwlazBO6dKJjqLc
+id: forcontu_at_search
+theme: forcontu_at
+region: sidebar_second
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

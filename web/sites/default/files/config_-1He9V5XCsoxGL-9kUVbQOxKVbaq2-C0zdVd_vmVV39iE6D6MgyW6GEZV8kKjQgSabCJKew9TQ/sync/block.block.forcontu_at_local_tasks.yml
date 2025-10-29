@@ -1,0 +1,22 @@
+uuid: 3d3b2611-2b5f-4127-b247-724a8521abf1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: VPtTFWaKHkD9h9f-jcVndnCPhnjrQTrPv7jUZFEXOKk
+id: forcontu_at_local_tasks
+theme: forcontu_at
+region: content
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

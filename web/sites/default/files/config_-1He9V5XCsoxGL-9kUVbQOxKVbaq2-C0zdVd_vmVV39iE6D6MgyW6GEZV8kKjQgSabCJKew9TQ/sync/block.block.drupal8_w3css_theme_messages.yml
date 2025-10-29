@@ -1,0 +1,22 @@
+uuid: 35470662-d095-4d1b-bdb6-c6b98c3d0b98
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_w3css_theme
+_core:
+  default_config_hash: IZ4yckD5ZErvQdUEXCKgME5sVt_4E5O-gHYiletWntE
+id: drupal8_w3css_theme_messages
+theme: drupal8_w3css_theme
+region: highlighted
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

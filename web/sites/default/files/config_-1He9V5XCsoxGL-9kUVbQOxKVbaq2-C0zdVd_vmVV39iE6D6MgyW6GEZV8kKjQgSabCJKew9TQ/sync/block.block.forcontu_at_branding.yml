@@ -1,0 +1,25 @@
+uuid: eba8b5d5-0a9d-48b8-b880-d8268cf1c8e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: FUmgRpZGrsteYByLjDAI88CGlNY52KgaSCyZVTygDzA
+id: forcontu_at_branding
+theme: forcontu_at
+region: header_first
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

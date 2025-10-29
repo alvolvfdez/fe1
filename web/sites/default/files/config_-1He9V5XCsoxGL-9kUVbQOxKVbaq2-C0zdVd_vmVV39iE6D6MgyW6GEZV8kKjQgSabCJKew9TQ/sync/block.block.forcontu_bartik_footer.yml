@@ -1,0 +1,27 @@
+uuid: bc3568ce-b9bf-44ac-8abb-b1e6e2e988a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: cOGu9KiV36jPd1ypk0yl3gVFgfhEzTx6mCmzLxSJ61I
+id: forcontu_bartik_footer
+theme: forcontu_bartik
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

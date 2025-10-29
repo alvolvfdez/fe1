@@ -1,0 +1,27 @@
+uuid: 5356b3c6-a1b3-4cec-a9dc-2af8347c081a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: Ua7svE7bY-3Q_gSO9n7-0WH5mg9jc4rDQ4KD79pkxFU
+id: forcontu_at_breadcrumbs
+theme: forcontu_at
+region: content_prefix
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: '<front>'

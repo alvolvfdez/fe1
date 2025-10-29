@@ -1,0 +1,22 @@
+uuid: 22c7c7d2-7a67-4a86-8102-99ac3b2c8328
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_w3css_theme
+_core:
+  default_config_hash: yPe8aG4-T4XsmxadKilWNIHBBZQBkV6AqEiSoijGxT8
+id: drupal8_w3css_theme_breadcrumbs
+theme: drupal8_w3css_theme
+region: breadcrumb
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: c835673f-ec39-4d0d-b9f3-de19e794ea99
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - search
+  theme:
+    - forcontu_bartik
+third_party_settings:
+  block_class:
+    classes: block--highlighted
+_core:
+  default_config_hash: BsbW26bDVnavqpfRuOp3gecOtsVAsF3_ATPD5E856-4
+id: forcontu_bartik_search
+theme: forcontu_bartik
+region: sidebar_first
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: dcf98e2e-96b8-4def-991f-0ed3c8c7ded4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: d1YBWkT-Xltc40K8rF69EzKs_E2j6SSKsq3cXwfZCzQ
+id: forcontu_bartik_main_menu
+theme: forcontu_bartik
+region: primary_menu
+weight: 10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

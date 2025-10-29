@@ -1,0 +1,20 @@
+uuid: 189de70d-069f-4f1c-b20d-98848890e5fd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: wBB0FymFb2RvEHJ3HQ0qNfRp5I2aBYxvqq3_Ip4_PI4
+id: forcontu_at_local_actions
+theme: forcontu_at
+region: content
+weight: 3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

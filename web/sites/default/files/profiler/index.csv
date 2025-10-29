@@ -1,2 +1,4 @@
 8d9740,192.168.1.1,GET,http://fe1.alvaolve.training.forcontu.com/,1761678508,8d9740,200,request
 d3e03f,192.168.1.1,POST,http://fe1.alvaolve.training.forcontu.com/history/1/read,1761678510,d3e03f,200,request
+6d5ecb,192.168.1.1,GET,http://fe1.alvaolve.training.forcontu.com/,1761725075,6d5ecb,200,request
+490019,192.168.1.1,POST,http://fe1.alvaolve.training.forcontu.com/history/1/read,1761725082,490019,200,request

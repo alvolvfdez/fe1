@@ -1,0 +1,22 @@
+uuid: e004b4d5-4ddb-437e-befe-7bc1f53b47de
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: 8H2vH0uBzI_Qwa1FDTmjBIk8Vhuew3KdlSHceDYNTlQ
+id: forcontu_at_messages
+theme: forcontu_at
+region: highlighted
+weight: -100
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

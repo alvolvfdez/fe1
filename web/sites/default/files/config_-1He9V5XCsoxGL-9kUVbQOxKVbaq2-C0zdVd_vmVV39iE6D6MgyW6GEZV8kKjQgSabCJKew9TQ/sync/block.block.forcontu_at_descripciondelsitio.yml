@@ -1,0 +1,29 @@
+uuid: 453724ca-5b4b-4f46-b733-e795eac0151f
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c010f549-cbff-4041-b2ec-6b552dd0ec3f'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - forcontu_at
+third_party_settings:
+  block_class:
+    classes: header-right
+id: forcontu_at_descripciondelsitio
+theme: forcontu_at
+region: header_second
+weight: 0
+provider: null
+plugin: 'block_content:c010f549-cbff-4041-b2ec-6b552dd0ec3f'
+settings:
+  id: 'block_content:c010f549-cbff-4041-b2ec-6b552dd0ec3f'
+  label: 'Descripción del sitio'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

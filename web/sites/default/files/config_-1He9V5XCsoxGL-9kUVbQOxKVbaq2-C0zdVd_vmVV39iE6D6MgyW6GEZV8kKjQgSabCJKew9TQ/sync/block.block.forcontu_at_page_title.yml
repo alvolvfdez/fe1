@@ -1,0 +1,27 @@
+uuid: 4431a707-0db0-4d15-9ee0-822b3943a461
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: WfyeQ9Llt3hsE45_6eyQSkCoteWno4gJ6E2OQVdVZHQ
+id: forcontu_at_page_title
+theme: forcontu_at
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "/node/*\r\n/user/*\r\n<front>"

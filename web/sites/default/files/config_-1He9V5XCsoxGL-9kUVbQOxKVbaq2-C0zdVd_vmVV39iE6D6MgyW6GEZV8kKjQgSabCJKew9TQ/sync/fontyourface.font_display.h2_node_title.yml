@@ -1,0 +1,12 @@
+uuid: 66ce4776-b3fc-482c-b836-2ae4714f788b
+langcode: es
+status: true
+dependencies: {  }
+id: h2_node_title
+label: 'h2 node title'
+font_url: 'https://www.google.com/webfonts/family?family=Roboto Slab&subset=latin#100'
+fallback: ''
+selectors: h2.node__title
+theme: forcontu_bartik
+style: null
+weight: null

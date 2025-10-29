@@ -1,0 +1,22 @@
+uuid: ca55463f-bb3c-4c57-8a8d-20c74d88c1cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_at
+_core:
+  default_config_hash: HRFweTjvYIKtN8O6YVawEx0K_c8Qb0qAvDtbSNfhKGU
+id: forcontu_at_content
+theme: forcontu_at
+region: content
+weight: 4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

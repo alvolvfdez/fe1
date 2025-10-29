@@ -1,0 +1,22 @@
+uuid: 92269ae7-d463-4aee-951f-1af36e4fb2e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - forcontu_bartik
+_core:
+  default_config_hash: IZ4yckD5ZErvQdUEXCKgME5sVt_4E5O-gHYiletWntE
+id: forcontu_bartik_messages
+theme: forcontu_bartik
+region: new_region
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
