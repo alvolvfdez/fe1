@@ -12,11 +12,11 @@ flex: 0 0 75%;
 flex: 0 0 25%;
 }
 
-/* Usa el wrapper real que contenga las 3 regiones */
-.page {
-  display: flex;
-  gap: 2rem;
-}
-.page .region-sidebar-first { order: 1; }
-.page .region-sidebar-second { order: 2; }
-.page .region-content { order: 3; }
+/* Reordenar main: sidebar-second a la izquierda del contenido */
+.pr-main__rw { display: flex; gap: 2rem; }
+.pr-main__sidebar-second { order: 1; }
+.pr-main__content { order: 2; }
+
+/* Opcional: anchos */
+.pr-main__sidebar-second { flex: 0 0 20rem; }
+.pr-main__content { flex: 1 1 auto; }
