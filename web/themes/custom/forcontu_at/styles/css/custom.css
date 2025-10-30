@@ -5,18 +5,13 @@
  ============================================================================ */
 
 .pr-header__header-first {
-flex: 0 0 75%;
+  flex: 0 0 75%;
 }
 
 .pr-header__header-second {
-flex: 0 0 25%;
+  flex: 0 0 25%;
 }
 
-/* Reordenar main: sidebar-second a la izquierda del contenido */
 .pr-main__rw { display: flex; gap: 2rem; }
 .pr-main__sidebar-second { order: 1; }
 .pr-main__content { order: 2; }
-
-/* Opcional: anchos */
-.pr-main__sidebar-second { flex: 0 0 20rem; }
-.pr-main__content { flex: 1 1 auto; }
