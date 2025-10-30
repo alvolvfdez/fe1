@@ -20,11 +20,11 @@
 }
 
 /* b) Fondo gris entre 800px y 1200px */
-@media (min-width: 800px) and (max-width: 1199.98px) {
+@media (min-width: 800px) and (max-width: 1199px) {
   .pr-main__sidebar-second { background: #eee; }
 }
 
 /* c) Ocultar bloque personalizado del header <500px */
-@media (max-width: 499.98px) {
+@media (max-width: 500px) {
   header #block-forcontu-at-descripciondelsitio { display: none !important; }
 }
