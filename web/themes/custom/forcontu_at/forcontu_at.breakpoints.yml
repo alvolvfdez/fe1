@@ -36,6 +36,14 @@ forcontu_at.simple.wide:
     - 1x
   group: forcontu_at.simple
 
+forcontu_at.simple.huge:
+  label: 'huge'
+  mediaQuery: 'all and (min-width: 75em)'
+  weight: 3
+  multipliers:
+    - '1x'
+  group: 'forcontu_at'
+
 # Breakpoints Advanced
 # ------------------------------------------------------------------------------
 # Pixel values based on 1em = 16px.
