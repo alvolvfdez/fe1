@@ -12,6 +12,19 @@
   flex: 0 0 25%;
 }
 
-.pr-main__rw { display: flex; gap: 2rem; }
-.pr-main__sidebar-second { order: 1; }
-.pr-main__content { order: 2; }
+/* a) Reordenar columnas solo >1200px */
+@media (min-width: 1200px) {
+  .pr-main__rw { display: flex; gap: 2rem; }
+  .pr-main__sidebar-second { order: 1; }
+  .pr-main__content { order: 2; }
+}
+
+/* b) Fondo gris entre 800px y 1200px */
+@media (min-width: 800px) and (max-width: 1199.98px) {
+  .pr-main__sidebar-second { background: #eee; }
+}
+
+/* c) Ocultar bloque personalizado del header <500px */
+@media (max-width: 499.98px) {
+  #block-forcontu-at-descripciondelsitio { display: none; }
+}
