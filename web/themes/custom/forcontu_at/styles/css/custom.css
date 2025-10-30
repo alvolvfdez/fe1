@@ -26,5 +26,5 @@
 
 /* c) Ocultar bloque personalizado del header <500px */
 @media (max-width: 499px) {
-  header #block-forcontu-at-descripciondelsitio { display: none; }
+  #block-forcontu-at-descripciondelsitio { display: none; }
 }
