@@ -41,8 +41,8 @@ forcontu_at.simple.huge:
   mediaQuery: 'all and (min-width: 75em)'
   weight: 3
   multipliers:
-    - '1x'
-  group: 'forcontu_at'
+    - 1x
+  group: forcontu_at.simple
 
 # Breakpoints Advanced
 # ------------------------------------------------------------------------------
