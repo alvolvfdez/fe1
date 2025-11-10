@@ -5,9 +5,9 @@
 }
 
 /* layout.css — estructura general */
-
+$color = #C7D0D6;
 #header {
-  background-color: #C7D0D6;
+  background-color: $color;
   background-image: none;
 }
 
