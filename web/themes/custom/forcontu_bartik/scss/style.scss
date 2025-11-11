@@ -232,3 +232,42 @@ form button[type="submit"] {
     background-color: var(--brand-accent);
   }
 }
+
+// 9.3b - Sintaxis de Sass II
+
+// e) Variable de tamaño base del enlace
+$link-size: 12px;
+
+.menu {
+  // a) Contenedor principal
+
+  ul {
+    // b) Lista horizontal sin viñetas
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; // muestra los <li> en horizontal
+  }
+
+  li {
+    margin-right: 15px; // separacion entre elementos
+  }
+
+  a {
+    // c) Color y negrita
+    color: #005f99;
+    font-weight: bold;
+    font-size: $link-size; // f) tamaño de fuente segun variable
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    // d) Estados hover y active con selector padre &
+    &:hover,
+    &:active {
+      color: #007acc;
+      text-decoration: underline;
+      font-size: $link-size + 3px; // g) +3 en hover/active
+    }
+  }
+}
+
