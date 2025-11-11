@@ -235,14 +235,14 @@ form button[type="submit"] {
 
 // 9.3b - Sintaxis de Sass II
 
-// e) Variable de tamaño base del enlace
+// e) Variable de tamano base del enlace
 $link-size: 12px;
 
 .menu {
   // a) Contenedor principal
 
   ul {
-    // b) Lista horizontal sin viñetas
+    // b) Lista horizontal sin vinetas
     list-style: none;
     margin: 0;
     padding: 0;
@@ -257,7 +257,7 @@ $link-size: 12px;
     // c) Color y negrita
     color: #005f99;
     font-weight: bold;
-    font-size: $link-size; // f) tamaño de fuente segun variable
+    font-size: $link-size; // f) tamano de fuente segun variable
     text-decoration: none;
     transition: all 0.2s ease;
 
