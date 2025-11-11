@@ -273,7 +273,7 @@ $link-size: 12px;
 
 // 9.3c - Sintaxis de Sass III: Mixins
 
-// Mixin con parámetros y valor por defecto
+// Mixin con parametros y valor por defecto
 // ----------------------------------------
 @mixin box-style($width, $height, $background-color: #fff) {
   width: $width;
@@ -281,7 +281,7 @@ $link-size: 12px;
   background-color: $background-color;
 }
 
-// Uso del mixin con formato LISTA (posición de parámetros)
+// Uso del mixin con formato LISTA (posicion de parametros)
 // --------------------------------------------------------
 .box1 {
   @include box-style(50%, 80px, #ccc);
