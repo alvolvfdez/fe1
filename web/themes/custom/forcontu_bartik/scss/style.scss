@@ -301,13 +301,13 @@ $link-size: 12px;
 
 // Variables iniciales
 $initial-width: 2em;
-$initial-font-size: 10px;
+$initial-font-size: 11px;
 
 // Bucle que genera .box-1 a .box-4
 @for $i from 1 through 4 {
   .box-#{$i} {
     width: $initial-width * $i;
-    font-size: $initial-font-size - ($i - 1);
+    font-size: $initial-font-size - ($i);
   }
 }
 
