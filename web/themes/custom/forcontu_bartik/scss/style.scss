@@ -297,4 +297,19 @@ $link-size: 12px;
   );
 }
 
+// 9.3d - Sintaxis de Sass IV: Bucles
+
+// Variables iniciales
+$initial-width: 2em;
+$initial-font-size: 10px;
+
+// Bucle que genera .box-1 a .box-4
+@for $i from 1 through 4 {
+  .box-#{$i} {
+    width: $initial-width * $i;
+    font-size: $initial-font-size - ($i - 1);
+  }
+}
+
+
 
