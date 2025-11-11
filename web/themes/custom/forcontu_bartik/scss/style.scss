@@ -13,7 +13,7 @@ $color = #C7D0D6;
 
 /* component.css - componentes reutilizables */
 
-/* Lista con viñetas cuadradas */
+/* Lista con vinetas cuadradas */
 
 .week-list {
   ul {
@@ -40,7 +40,7 @@ $color = #C7D0D6;
   color: #fff;
 }
 
-/* Enlace específico */
+/* Enlace especifico */
 
 .drupal-link {
   color: #005f99;
@@ -64,7 +64,7 @@ $color = #C7D0D6;
   border-radius: 2px;
 }
 
-/* Usuario anónimo: imagen con transparencia */
+/* Usuario anonimo: imagen con transparencia */
 
 .user-logged-out .node--type-article .field--type-image img {
   opacity: 0.5;
@@ -75,7 +75,7 @@ $color = #C7D0D6;
   }
 }
 
-/* Selectores avanzados en artículos */
+/* Selectores avanzados en articulos */
 
 .node--type-article .field--name-body p {
   &:first-of-type {
@@ -153,7 +153,7 @@ form {
   }
 }
 
-/* Botón submit del bloque de búsqueda */
+/* Boton submit del bloque de busqueda */
 
 #block-forcontu-bartik-search .form-submit {
   display: inline-block;
@@ -175,7 +175,7 @@ form {
   }
 }
 
-/* Leer más - solo en la portada (cubre distintas convenciones de clase en <body>) */
+/* Leer mas - solo en la portada (cubre distintas convenciones de clase en <body>) */
 
 .path-front .node--teaser .node__readmore a, .front .node--teaser .node__readmore a, body.path-front .node--teaser .node__readmore a {
   color: #005f99;
@@ -183,7 +183,7 @@ form {
   /* color solicitado */
   font-size: 1.2rem;
 
-  /* tamaño aumentado */
+  /* tamano aumentado */
 }
 
 /* 7.3a a) Bloques resaltados */
@@ -203,7 +203,7 @@ form {
   background-color: #fafafa;
 }
 
-/* theme.css - estilos temáticos / visuales */
+/* theme.css - estilos tematicos / visuales */
 
 :root {
   --brand-color:#005f99;
