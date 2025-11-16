@@ -422,7 +422,7 @@ custom_css_file:
 custom_js:
   version: 1.x
   js:
-    js/custom.js: {}
+    js/custom_js.js: {}
   dependencies:
     - core/drupal
     - core/jquery
