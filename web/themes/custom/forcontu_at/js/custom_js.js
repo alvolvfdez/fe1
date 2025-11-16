@@ -42,7 +42,7 @@ function colorDia(dia) {
     var color = colorDia(dia);
 
     // change header background
-    $('header.site-header').css('background-color', color);
+    $('header.pr-header').css('background-color', color);
   });
 
 })(jQuery, Drupal);
