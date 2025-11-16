@@ -55,3 +55,45 @@ function colorDia(dia) {
 
 })(Drupal);
 
+(function (Drupal) {
+  'use strict';
+
+  // array with weekday names
+  function diaSemana(dia) {
+    var dias = [
+      'Lunes',
+      'Martes',
+      'Miercoles',
+      'Jueves',
+      'Viernes',
+      'Sabado',
+      'Domingo'
+    ];
+    return dias[dia - 1];
+  }
+
+  Drupal.behaviors.forcontuDiaSemana = {
+    attach: function (context) {
+
+      var siteName = context.querySelector('div.site-branding');
+
+      if (!siteName) {
+        return;
+      }
+
+      // get day
+      var today = new Date().getDay();
+      var dia = today === 0 ? 7 : today;
+
+      // create span
+      var span = document.createElement('span');
+      span.className = 'semana';
+      span.textContent = ' (Hoy es ' + diaSemana(dia) + ')';
+
+      // insert after the site name
+      siteName.insertAdjacentElement('afterend', span);
+    }
+  };
+
+})(Drupal);
+
