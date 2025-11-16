@@ -432,5 +432,4 @@ custom_query:
   js:
     js/custom_jquery.js: {}
   dependencies:
-    - core/drupal
     - core/jquery
