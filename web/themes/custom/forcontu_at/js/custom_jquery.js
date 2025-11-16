@@ -1,20 +1,15 @@
-/**
- * custom jquery library
- */
-(function ($, Drupal) {
+(function ($, Drupal, once) {
   'use strict';
 
   Drupal.behaviors.forcontuFadeout = {
     attach: function (context) {
 
-      // find elements with class .fadeout
-      $('.fadeout', context).once('forcontuFadeout').each(function () {
-
-        // apply fadeout effect
-        $(this).fadeOut(2000); // 2 seconds
-
+      once('forcontuFadeout', '.fadeout', context).forEach(function (el) {
+        $(el).fadeOut(2000);
       });
+
     }
   };
 
-})(jQuery, Drupal);
+})(jQuery, Drupal, once);
+
