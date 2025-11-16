@@ -1,65 +1,35 @@
 /**
  * custom js library
  */
-(function ($, Drupal) {
-  'use strict';
-
-  // load message
-  console.log(Drupal.t('Loading JS custom library'));
-
-})(jQuery, Drupal);
-
-// function that returns a color for each weekday
-function colorDia(dia) {
-  var colors = [
-    '#FF0000', // 1 lunes - red
-    '#FF7F00', // 2 martes - orange
-    '#FFFF00', // 3 miercoles - yellow
-    '#00FF00', // 4 jueves - green
-    '#0000FF', // 5 viernes - blue
-    '#4B0082', // 6 sabado - indigo
-    '#9400D3'  // 7 domingo - violet
-  ];
-
-  return colors[dia - 1];
-}
-
 (function (Drupal) {
   'use strict';
 
-  Drupal.behaviors.forcontuColorHeader = {
-    attach: function (context) {
-
-      // prevent duplicate execution
-      if (!context.querySelector || !context.querySelector('header#masthead')) {
-        return;
-      }
-
-      var header = context.querySelector('header#masthead');
-
-      // get current day (0 = domingo)
-      var today = new Date().getDay();
-
-      // convert 0 to 7
-      var dia = today === 0 ? 7 : today;
-
-      // get color
-      var color = colorDia(dia);
-
-      // apply background
-      header.style.backgroundColor = color;
-
-      console.log('Applying header color: ' + color);
-    }
-  };
+  console.log(Drupal.t('Loading JS custom library'));
 
 })(Drupal);
 
-(function (Drupal) {
-  'use strict';
+/**
+ * global utilities for javascript exercises
+ * shared functions for all behaviors
+ */
+window.ForcontuUtils = {
 
-  // array with weekday names
-  function diaSemana(dia) {
+  // return color for weekday number (1-7)
+  colorDia: function (dia) {
+    var colors = [
+      '#FF0000', // 1 lunes
+      '#FF7F00', // 2 martes
+      '#FFFF00', // 3 miercoles
+      '#00FF00', // 4 jueves
+      '#0000FF', // 5 viernes
+      '#4B0082', // 6 sabado
+      '#9400D3'  // 7 domingo
+    ];
+    return colors[dia - 1];
+  },
+
+  // return weekday name
+  diaSemana: function (dia) {
     var dias = [
       'Lunes',
       'Martes',
@@ -70,30 +40,89 @@ function colorDia(dia) {
       'Domingo'
     ];
     return dias[dia - 1];
-  }
+  },
 
-  Drupal.behaviors.forcontuDiaSemana = {
+  // return todays weekday number (1-7)
+  getToday: function () {
+    var today = new Date().getDay();
+    return today === 0 ? 7 : today;
+  }
+};
+
+/**
+ * behavior for applying header color on load
+ */
+(function (Drupal) {
+  'use strict';
+
+  Drupal.behaviors.forcontuColorHeader = {
     attach: function (context) {
 
-      var siteName = context.querySelector('div.site-branding');
+      var header = context.querySelector('header#masthead');
+      if (!header) return;
 
-      if (!siteName) {
-        return;
-      }
+      var dia = ForcontuUtils.getToday();
+      var color = ForcontuUtils.colorDia(dia);
 
-      // get day
-      var today = new Date().getDay();
-      var dia = today === 0 ? 7 : today;
+      header.style.backgroundColor = color;
 
-      // create span
-      var span = document.createElement('span');
-      span.className = 'semana';
-      span.textContent = ' (Hoy es ' + diaSemana(dia) + ')';
-
-      // insert after the site name
-      siteName.insertAdjacentElement('afterend', span);
+      console.log('Applying header color: ' + color);
     }
   };
 
 })(Drupal);
 
+/**
+ * behavior for printing weekday next to site title
+ */
+(function (Drupal) {
+  'use strict';
+
+  Drupal.behaviors.forcontuDiaSemana = {
+    attach: function (context) {
+
+      var siteBranding = context.querySelector('div.site-branding');
+      if (!siteBranding) return;
+
+      var dia = ForcontuUtils.getToday();
+
+      var span = document.createElement('span');
+      span.className = 'semana';
+      span.textContent = ' (Hoy es ' + ForcontuUtils.diaSemana(dia) + ')';
+
+      siteBranding.insertAdjacentElement('afterend', span);
+    }
+  };
+
+})(Drupal);
+
+/**
+ * behavior for changing header color on site-name click
+ */
+(function (Drupal) {
+  'use strict';
+
+  Drupal.behaviors.forcontuEventosColor = {
+    attach: function (context) {
+
+      var siteName = context.querySelector('#site-name');
+      var header = context.querySelector('#masthead');
+
+      if (!siteName || !header) return;
+
+      // start at todays color
+      var dia = ForcontuUtils.getToday();
+
+      siteName.addEventListener('click', function () {
+
+        header.style.backgroundColor = ForcontuUtils.colorDia(dia);
+
+        dia++;
+        if (dia > 7) {
+          dia = 1;
+        }
+      });
+    }
+  };
+
+})(Drupal);
