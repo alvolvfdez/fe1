@@ -44,3 +44,6 @@ features:
   - node_user_picture
   - comment_user_picture
   - comment_user_verification
+libraries:
+  - forcontu_at/custom_js
+

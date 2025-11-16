@@ -418,3 +418,11 @@ custom_css_file:
   css:
     theme:
       styles/css/custom.css: { weight: 1000 }
+
+custom_js:
+  version: 1.x
+  js:
+    js/custom.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
