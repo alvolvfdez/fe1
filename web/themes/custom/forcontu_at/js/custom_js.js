@@ -31,11 +31,11 @@ function colorDia(dia) {
     attach: function (context) {
 
       // prevent duplicate execution
-      if (!context.querySelector || !context.querySelector('#header')) {
+      if (!context.querySelector || !context.querySelector('header.1-pr')) {
         return;
       }
 
-      var header = context.querySelector('#header');
+      var header = context.querySelector('header.1-pr');
 
       // get current day (0 = domingo)
       var today = new Date().getDay();
