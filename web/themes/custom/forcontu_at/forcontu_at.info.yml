@@ -46,4 +46,5 @@ features:
   - comment_user_verification
 libraries:
   - forcontu_at/custom_js
+  - forcontu_at/custom_query
 

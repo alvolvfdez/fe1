@@ -426,3 +426,11 @@ custom_js:
   dependencies:
     - core/drupal
     - core/jquery
+
+custom_query:
+  version: 1.x
+  js:
+    js/custom_jquery.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
