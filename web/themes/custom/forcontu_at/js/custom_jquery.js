@@ -1,15 +1,9 @@
-(function ($, Drupal, once) {
+function ($) {
   'use strict';
 
-  Drupal.behaviors.forcontuFadeout = {
-    attach: function (context) {
+  $(document).ready(function() {
+    $(".fadeout").delay(2000).fadeOut(3000);
+  });
+})(jQuery);
 
-      once('forcontuFadeout', '.fadeout', context).forEach(function (el) {
-        $(el).fadeOut(2000);
-      });
-
-    }
-  };
-
-})(jQuery, Drupal, once);
 
