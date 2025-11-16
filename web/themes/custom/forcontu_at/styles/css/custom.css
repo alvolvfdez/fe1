@@ -28,3 +28,13 @@
 @media (max-width: 499px) {
   #block-forcontu-at-descripciondelsitio { display: none; }
 }
+
+.par {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.impar {
+  background-color: #d9edf7;
+  color: #000;
+}
