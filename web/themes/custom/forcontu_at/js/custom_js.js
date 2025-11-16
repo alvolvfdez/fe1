@@ -105,7 +105,7 @@ window.ForcontuUtils = {
   Drupal.behaviors.forcontuEventosColor = {
     attach: function (context) {
 
-      var siteName = context.querySelector('#site-name');
+      var siteName = context.querySelector('.site-branding__name-link');
       var header = context.querySelector('#masthead');
 
       if (!siteName || !header) return;
