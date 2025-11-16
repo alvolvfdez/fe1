@@ -24,26 +24,34 @@ function colorDia(dia) {
   return colors[dia - 1];
 }
 
-(function ($, Drupal) {
+(function (Drupal) {
   'use strict';
 
-  // function in global scope, so declare again here if needed
-  window.colorDia = colorDia;
+  Drupal.behaviors.forcontuColorHeader = {
+    attach: function (context) {
 
-  $(document).ready(function () {
+      // prevent duplicate execution
+      if (!context.querySelector || !context.querySelector('#header')) {
+        return;
+      }
 
-    // get current day (0 = domingo, 1 = lunes...)
-    var today = new Date().getDay();
+      var header = context.querySelector('#header');
 
-    // convert JS day to our system (lunes = 1)
-    var dia = today === 0 ? 7 : today;
+      // get current day (0 = domingo)
+      var today = new Date().getDay();
 
-    // get color for this day
-    var color = colorDia(dia);
+      // convert 0 to 7
+      var dia = today === 0 ? 7 : today;
 
-    // change header background
-    $('header.pr-header').css('background-color', color);
-  });
+      // get color
+      var color = colorDia(dia);
 
-})(jQuery, Drupal);
+      // apply background
+      header.style.backgroundColor = color;
+
+      console.log('Applying header color: ' + color);
+    }
+  };
+
+})(Drupal);
 
