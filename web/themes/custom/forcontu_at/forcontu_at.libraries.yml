@@ -434,3 +434,4 @@ custom_query:
   dependencies:
     - core/drupal
     - core/jquery
+    - core/once
