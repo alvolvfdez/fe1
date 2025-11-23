@@ -90,3 +90,22 @@
 
 })(jQuery);
 
+(function ($) {
+  'use strict';
+
+  $(document).ready(function() {
+
+    $(".site-branding a").click(function(event) {
+      event.preventDefault();
+
+      $(this)
+        .fadeOut(500)
+        .css("color", "red")
+        .fadeIn(500);
+    });
+
+  });
+
+})(jQuery);
+
+
