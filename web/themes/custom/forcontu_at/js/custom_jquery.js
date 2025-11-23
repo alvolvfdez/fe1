@@ -112,8 +112,6 @@
   'use strict';
 
   $(document).ready(function() {
-    $(".fadeout").delay(2000).fadeOut(3000);
-
     $("#block-forcontu-at-views-block-ultimos-articulos-block-1 h3").accordion({
       header: "h3",
       collapsible: true,
