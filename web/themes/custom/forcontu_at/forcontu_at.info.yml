@@ -47,4 +47,5 @@ features:
 libraries:
   - forcontu_at/custom_js
   - forcontu_at/custom_query
+  - forcontu_at/bootstrap
 
