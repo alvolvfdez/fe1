@@ -76,13 +76,13 @@
 
     $(".node--type-article h1.node__title").toggleClick(
       function () {
-        $(".field--name-field-image img").css("width", "80%");
+        $(".field-name-field-image img").css("width", "80%");
       },
       function () {
-        $(".field--name-field-image img").css("width", "60%");
+        $(".field-name-field-image img").css("width", "60%");
       },
       function () {
-        $(".field--name-field-image img").css("width", "100%");
+        $(".field-name-field-image img").css("width", "100%");
       }
     );
 
