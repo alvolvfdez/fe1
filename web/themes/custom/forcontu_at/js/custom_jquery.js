@@ -108,4 +108,20 @@
 
 })(jQuery);
 
+(function ($) {
+  'use strict';
+
+  $(document).ready(function() {
+
+    $("#block-forcontu-at-views-block-ultimos-articulos-block-1 h3").accordion({
+      header: "h3",
+      collapsible: true,
+      heightStyle: "content"
+    });
+
+  });
+
+})(jQuery);
+
+
 

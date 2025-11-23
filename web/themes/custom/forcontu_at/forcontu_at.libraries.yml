@@ -433,3 +433,4 @@ custom_query:
     js/custom_jquery.js: {}
   dependencies:
     - core/jquery
+    - jquery_ui_accordion/accordion
