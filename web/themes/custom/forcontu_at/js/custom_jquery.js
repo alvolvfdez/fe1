@@ -49,7 +49,7 @@
   'use strict';
 
   $(document).ready(function() {
-    $("a.site-branding__logo-link").click(function(event) {
+    $(".site-branding a").click(function(event) {
       event.preventDefault();
     });
   });
