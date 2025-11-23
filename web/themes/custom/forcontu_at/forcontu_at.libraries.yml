@@ -434,3 +434,13 @@ custom_query:
   dependencies:
     - core/jquery
     - jquery_ui_accordion/accordion
+
+bootstrap:
+  js:
+    /libraries/popper/popper.min.js: {}
+    /libraries/bootstrap/js/bootstrap.min.js: {}
+  css:
+    component:
+      /libraries/bootstrap/css/bootstrap.min.css: {}
+  dependencies:
+    - core/jquery
