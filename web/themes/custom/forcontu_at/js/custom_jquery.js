@@ -74,7 +74,7 @@
 
   $(document).ready(function() {
 
-    $("h2.node__title").toggleClick(
+    $("h1.node__title").toggleClick(
       function () {
         $(".field--name-field-image img").css("width", "80%");
       },
