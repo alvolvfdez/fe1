@@ -56,3 +56,37 @@
 
 })(jQuery);
 
+(function($) {
+  $.fn.toggleClick = function() {
+    var functions = arguments;
+    return this.each(function() {
+      var iteration = 0;
+      $(this).click(function() {
+        functions[iteration].apply(this, arguments);
+        iteration = (iteration + 1) % functions.length;
+      })
+    })
+  }
+})(jQuery);
+
+(function ($) {
+  'use strict';
+
+  $(document).ready(function() {
+
+    $("h2.node__title").toggleClick(
+      function () {
+        $(".field--name-field-image img").css("width", "80%");
+      },
+      function () {
+        $(".field--name-field-image img").css("width", "60%");
+      },
+      function () {
+        $(".field--name-field-image img").css("width", "100%");
+      }
+    );
+
+  });
+
+})(jQuery);
+
