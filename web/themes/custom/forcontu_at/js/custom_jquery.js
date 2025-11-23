@@ -44,3 +44,15 @@
   });
 
 })(jQuery);
+
+(function ($) {
+  'use strict';
+
+  $(document).ready(function() {
+    $("#site-name a").click(function(event) {
+      event.preventDefault();
+    });
+  });
+
+})(jQuery);
+
