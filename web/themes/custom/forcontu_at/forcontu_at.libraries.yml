@@ -437,10 +437,10 @@ custom_query:
 
 bootstrap:
   js:
-    /web/libraries/popper/popper.min.js: {}
-    /web/libraries/bootstrap/js/bootstrap.min.js: {}
+    /libraries/popper/popper.min.js: {}
+    /libraries/bootstrap/js/bootstrap.min.js: {}
   css:
     component:
-      /web/libraries/bootstrap/css/bootstrap.min.css: {}
+      /libraries/bootstrap/css/bootstrap.min.css: {}
   dependencies:
     - core/jquery
