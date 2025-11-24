@@ -27,6 +27,7 @@
         "drupal/d8w3css": "^2.0",
         "drupal/field_formatter_class": "^1.8",
         "drupal/fontyourface": "^4.0",
+        "drupal/jquery_ui": "^1.8",
         "drupal/stable": "^2.1",
         "drupal/twig_tweak": "^3.4",
         "drupal/twig_vardumper": "^3.2",
