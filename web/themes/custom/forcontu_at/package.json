@@ -35,5 +35,8 @@
     "theme",
     "adaptivetheme"
   ],
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "dependencies": {
+    "@popperjs/core": "^2.11.8"
+  }
 }
