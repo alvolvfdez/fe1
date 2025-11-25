@@ -437,7 +437,7 @@ custom_query:
 
 bootstrap:
   js:
-    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+    node_modules/bootstrap/dist/js/bootstrap.bundle.min.js: {}
   css:
     component:
       node_modules/bootstrap/dist/css/bootstrap.min.css: {}
