@@ -127,7 +127,7 @@ function js() {
 // Static Server + watching scss/html files
 function serve() {
   browserSync.init({
-    proxy: 'https://www.drupal.org',
+    proxy: 'http://fe1.alvaolve.training.forcontu.com',
   });
 
   gulp
@@ -136,7 +136,7 @@ function serve() {
   gulp.watch(paths.scss.componentsWatch, createCssComponent);
 }
 
-const build = gulp.series(styles, gulp.parallel(js, serve));
+const build = gulp.series(styles, gulp.parallel(js));
 
 exports.styles = styles;
 exports.js = js;
