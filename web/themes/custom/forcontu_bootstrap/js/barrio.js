@@ -7,7 +7,7 @@
 
   'use strict';
 
-  Drupal.behaviors.bootstrap_barrio = {
+  Drupal.behaviors.forcontu_bootstrap = {
     attach: function (context, settings) {
 
       var position = window.scrollY;
@@ -33,15 +33,15 @@
 
         // If the clicked element doesn't have the right selector, bail
         if (!event.target.matches('.dropdown-item a.dropdown-toggle')) return;
-      
+
         // Don't follow the link
         event.preventDefault();
-      
+
         toggle(event.target.next('ul'));
         event.stopPropagation();
-      
+
       }, false);
-      
+
       // Toggle element visibility
       var toggle = function (elem) {
 
@@ -55,11 +55,11 @@
         show(elem);
 
       };
-      
+
       var show = function (elem) {
         elem.style.display = 'block';
       };
-      
+
       var hide = function (elem) {
         elem.style.display = 'none';
       };

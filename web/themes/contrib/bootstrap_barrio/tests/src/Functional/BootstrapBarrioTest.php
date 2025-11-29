@@ -25,7 +25,7 @@ class BootstrapBarrioTest extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
-  protected $defaultTheme = 'bootstrap_barrio';
+  protected $defaultTheme = 'forcontu_bootstrap';
 
 
   /**

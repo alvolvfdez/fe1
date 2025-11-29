@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap_barrio
+    - forcontu_bootstrap
 id: bootstrap_barrio_account_menu
-theme: bootstrap_barrio
+theme: forcontu_bootstrap
 region: secondary_menu
 weight: -7
 provider: null

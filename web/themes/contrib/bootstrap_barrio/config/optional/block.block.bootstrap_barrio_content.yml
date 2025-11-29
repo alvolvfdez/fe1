@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap_barrio
+    - forcontu_bootstrap
 id: bootstrap_barrio_content
-theme: bootstrap_barrio
+theme: forcontu_bootstrap
 region: content
 weight: -3
 provider: null

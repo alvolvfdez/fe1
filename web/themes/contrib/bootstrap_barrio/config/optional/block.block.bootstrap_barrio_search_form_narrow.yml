@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - bootstrap_barrio
+    - forcontu_bootstrap
 id: bootstrap_barrio_search_form_narrow
-theme: bootstrap_barrio
+theme: forcontu_bootstrap
 region: sidebar_first
 weight: -7
 provider: null

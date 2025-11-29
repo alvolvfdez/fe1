@@ -1,0 +1,58 @@
+# Library.
+# ----------------------------
+forcontu_bootstrap_library: 'production'
+# Layout.
+# ----------------------------
+forcontu_bootstrap_sidebar_position: 'both'
+forcontu_bootstrap_content_offset: 0
+forcontu_bootstrap_sidebar_first_width: 4
+forcontu_bootstrap_sidebar_first_offset: 0
+forcontu_bootstrap_sidebar_second_width: 3
+forcontu_bootstrap_sidebar_second_offset: 0
+
+# Container.
+# ----------------------------
+forcontu_bootstrap_container: 'container'
+forcontu_bootstrap_fluid_container: 0
+
+# Buttons.
+# ----------------------------
+forcontu_bootstrap_button: 1
+forcontu_bootstrap_button_size: ''
+forcontu_bootstrap_button_outline: 0
+
+# Navbar.
+# ----------------------------
+forcontu_bootstrap_navbar_toggle: 'navbar-toggleable-lg'
+forcontu_bootstrap_navbar_container: ''
+forcontu_bootstrap_navbar_top_position: ''
+forcontu_bootstrap_navbar_top_color: ''
+forcontu_bootstrap_navbar_top_background: ''
+forcontu_bootstrap_navbar_position: ''
+forcontu_bootstrap_navbar_color: ''
+forcontu_bootstrap_navbar_background: ''
+
+# Messages.
+# ----------------------------
+forcontu_bootstrap_messages_widget: 'alerts'
+
+# Colors.
+# ----------------------------
+forcontu_bootstrap_system_messages: 'messages_white'
+
+# Tables.
+# ----------------------------
+forcontu_bootstrap_table_hover: 1
+forcontu_bootstrap_table_style: 'table-striped'
+
+# Colors
+# ----------------------------
+forcontu_bootstrap_enable_color: false
+forcontu_bootstrap_color_scheme: 'default'
+forcontu_bootstrap_base_primary_color: '#2F3C7E'
+forcontu_bootstrap_base_secondary_color: '#FBEAEB'
+forcontu_bootstrap_body_color: 'gray-800'
+forcontu_bootstrap_body_bg_color: 'white'
+forcontu_bootstrap_h1_color: 'base'
+forcontu_bootstrap_h2_color: 'base'
+forcontu_bootstrap_h3_color: 'base'

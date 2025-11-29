@@ -25,7 +25,7 @@ function bootstrap_barrio_preprocess_html(&$variables) {
 
   // Color settings
   if (theme_get_setting('bootstrap_barrio_enable_color')) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/colors';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/colors';
     // CSS variables
     $gray200 = '#e9ecef';
     $gray800 = '#343a40';
@@ -181,43 +181,43 @@ function bootstrap_barrio_preprocess_page(&$variables) {
 
   $img_fluid = theme_get_setting('bootstrap_barrio_image_fluid');
   if ($img_fluid) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/image_fluid';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/image_fluid';
   }
 
   $flyout = theme_get_setting('bootstrap_barrio_navbar_flyout');
   if ($flyout) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/navigation';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/navigation';
   }
 
   $slide = theme_get_setting('bootstrap_barrio_navbar_slide');
   if ($slide) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/slide_nav';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/slide_nav';
   }
 
   switch (theme_get_setting('bootstrap_barrio_tabs_style')) {
     case 'full':
-      $variables['#attached']['library'][] = 'bootstrap_barrio/tabs_full';
+      $variables['#attached']['library'][] = 'forcontu_bootstrap/tabs_full';
       break;
   }
 
   $fonts = theme_get_setting('bootstrap_barrio_google_fonts');
   if ($fonts) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/' . $fonts;
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/' . $fonts;
   }
 
   $icons = theme_get_setting('bootstrap_barrio_bootstrap_icons');
   if ($icons) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/bootstrap-icons';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/bootstrap-icons';
   }
 
   $icons = theme_get_setting('bootstrap_barrio_icons');
   if ($icons) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/' . $icons;
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/' . $icons;
   }
 
   $system_messages = theme_get_setting('bootstrap_barrio_system_messages');
   if ($system_messages) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/' . $system_messages;
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/' . $system_messages;
   }
 
   $content_width = 'col';
@@ -273,7 +273,7 @@ function bootstrap_barrio_preprocess_page(&$variables) {
   $affix_sidebar_first = theme_get_setting('bootstrap_barrio_sidebar_first_affix');
   $affix_sidebar_second = theme_get_setting('bootstrap_barrio_sidebar_second_affix');
   if ($affix_navbar_top || $affix_navbar || $affix_sidebar_first || $affix_sidebar_second) {
-    $variables['#attached']['library'][] = 'bootstrap_barrio/affix';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/affix';
     if ($affix_navbar_top) {
       $variables['navbar_top_attributes']['data-toggle'] = 'affix';
     }
@@ -363,7 +363,7 @@ function bootstrap_barrio_preprocess_page(&$variables) {
   if (theme_get_setting('bootstrap_barrio_sidebar_collapse')) {
     $variables['content_attributes']['class'][] = 'sidebar-offcanvas';
     $variables['sidebar_collapse'] = TRUE;
-    $variables['#attached']['library'][] = 'bootstrap_barrio/sidebar_collapse';
+    $variables['#attached']['library'][] = 'forcontu_bootstrap/sidebar_collapse';
   }
 
   // Declare region attributes.
@@ -414,7 +414,7 @@ function bootstrap_barrio_preprocess_maintenance_page(&$variables) {
   }
 
   // Bootstrap Barrio has custom styling for the maintenance page.
-  $variables['#attached']['library'][] = 'bootstrap_barrio/maintenance_page';
+  $variables['#attached']['library'][] = 'forcontu_bootstrap/maintenance_page';
 }
 
 /**
@@ -828,7 +828,7 @@ function bootstrap_barrio_preprocess_input(&$variables) {
     $button_is_outline = theme_get_setting('bootstrap_barrio_button_outline');
     $button_type = theme_get_setting('bootstrap_barrio_button_type') ?? 'primary';
     if (is_object($variables['attributes']['class'])) {
-      \Drupal::logger('bootstrap_barrio')->notice(implode($variables['attributes']['class']->value()));
+      \Drupal::logger('forcontu_bootstrap')->notice(implode($variables['attributes']['class']->value()));
       if (!in_array('btn', $variables['attributes']['class']->value())) {
         $variables['attributes']['class']->addClass('btn');
       }

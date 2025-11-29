@@ -1,0 +1,375 @@
+# Schema for the configuration files of the Bootstrap Barrio Subtheme.
+
+forcontu_bootstrap.settings:
+  type: theme_settings
+  label: 'Bootstrap Barrio settings'
+  mapping:
+
+    # Library.
+    # ----------------------------
+    forcontu_bootstrap_library:
+      type: string
+      label: 'Load library'
+    forcontu_bootstrap_source:
+      type: string
+      label: 'Load library'
+
+    # Container.
+    # ----------------------------
+    forcontu_bootstrap_fluid_container:
+      type: integer
+      label: 'Fluid container'
+    forcontu_bootstrap_container:
+      type: string
+      label: 'Container'
+
+    # Region.
+    # ----------------------------
+    forcontu_bootstrap_region_clean_top_header:
+      type: integer
+      label: 'Clean wrapper for Top header region'
+    forcontu_bootstrap_region_class_top_header:
+      type: string
+      label: 'Classes for Top header region'
+    forcontu_bootstrap_region_clean_top_header_form:
+      type: integer
+      label: 'Clean wrapper for Top header form region'
+    forcontu_bootstrap_region_class_top_header_form:
+      type: string
+      label: 'Classes for Top header form region'
+    forcontu_bootstrap_region_clean_header:
+      type: integer
+      label: 'Clean wrapper for Header region'
+    forcontu_bootstrap_region_class_header:
+      type: string
+      label: 'Classes for Header region'
+    forcontu_bootstrap_region_clean_header_form:
+      type: integer
+      label: 'Clean wrapper for Header form region'
+    forcontu_bootstrap_region_class_header_form:
+      type: string
+      label: 'Classes for Header form region'
+    forcontu_bootstrap_region_clean_primary_menu:
+      type: integer
+      label: 'Clean wrapper for Primary menu region'
+    forcontu_bootstrap_region_class_primary_menu:
+      type: string
+      label: 'Classes for Primary menu region'
+    forcontu_bootstrap_region_clean_secondary_menu:
+      type: integer
+      label: 'Clean wrapper for Secondary menu region'
+    forcontu_bootstrap_region_class_secondary_menu:
+      type: string
+      label: 'Classes for Secondary menu region'
+    forcontu_bootstrap_region_clean_page_top:
+      type: integer
+      label: 'Clean wrapper for Page top region'
+    forcontu_bootstrap_region_class_page_top:
+      type: string
+      label: 'Classes for Page top region'
+    forcontu_bootstrap_region_clean_page_bottom:
+      type: integer
+      label: 'Clean wrapper for Page bottom region'
+    forcontu_bootstrap_region_class_page_bottom:
+      type: string
+      label: 'Classes for Page bottom region'
+    forcontu_bootstrap_region_clean_highlighted:
+      type: integer
+      label: 'Clean wrapper for Highlighted region'
+    forcontu_bootstrap_region_class_highlighted:
+      type: string
+      label: 'Classes for Highlighted region'
+    forcontu_bootstrap_region_clean_featured_top:
+      type: integer
+      label: 'Clean wrapper for Featured top region'
+    forcontu_bootstrap_region_class_featured_top:
+      type: string
+      label: 'Classes for Featured top region'
+    forcontu_bootstrap_region_clean_breadcrumb:
+      type: integer
+      label: 'Clean wrapper for Breadcrumb region'
+    forcontu_bootstrap_region_class_breadcrumb:
+      type: string
+      label: 'Classes for Breadcrumb region'
+    forcontu_bootstrap_region_clean_content:
+      type: integer
+      label: 'Clean wrapper for Content region'
+    forcontu_bootstrap_region_class_content:
+      type: string
+      label: 'Classes for Content region'
+    forcontu_bootstrap_region_clean_sidebar_first:
+      type: integer
+      label: 'Clean wrapper for Sidebar first region'
+    forcontu_bootstrap_region_class_sidebar_first:
+      type: string
+      label: 'Classes for Sidebar first region'
+    forcontu_bootstrap_region_clean_sidebar_second:
+      type: integer
+      label: 'Clean wrapper for Sidebar second region'
+    forcontu_bootstrap_region_class_sidebar_second:
+      type: string
+      label: 'Classes for Sidebar second region'
+    forcontu_bootstrap_region_clean_featured_bottom_first:
+      type: integer
+      label: 'Clean wrapper for Featured bottom first region'
+    forcontu_bootstrap_region_class_featured_bottom_first:
+      type: string
+      label: 'Classes for Featured bottom first region'
+    forcontu_bootstrap_region_clean_featured_bottom_second:
+      type: integer
+      label: 'Clean wrapper for Featured bottom second region'
+    forcontu_bootstrap_region_class_featured_bottom_second:
+      type: string
+      label: 'Classes for Featured bottom second region'
+    forcontu_bootstrap_region_clean_featured_bottom_third:
+      type: integer
+      label: 'Clean wrapper for Featured bottom third region'
+    forcontu_bootstrap_region_class_featured_bottom_third:
+      type: string
+      label: 'Classes for Featured bottom third region'
+    forcontu_bootstrap_region_clean_footer_first:
+      type: integer
+      label: 'Clean wrapper for Footer first region'
+    forcontu_bootstrap_region_class_footer_first:
+      type: string
+      label: 'Classes for Footer first region'
+    forcontu_bootstrap_region_clean_footer_second:
+      type: integer
+      label: 'Clean wrapper for Footer second region'
+    forcontu_bootstrap_region_class_footer_second:
+      type: string
+      label: 'Classes for Footer second region'
+    forcontu_bootstrap_region_clean_footer_third:
+      type: integer
+      label: 'Clean wrapper for Footer third region'
+    forcontu_bootstrap_region_class_footer_third:
+      type: string
+      label: 'Classes for Footer third region'
+    forcontu_bootstrap_region_clean_footer_fourth:
+      type: integer
+      label: 'Clean wrapper for Footer fourth region'
+    forcontu_bootstrap_region_class_footer_fourth:
+      type: string
+      label: 'Classes for Footer fourth region'
+    forcontu_bootstrap_region_clean_footer_fifth:
+      type: integer
+      label: 'Clean wrapper for Footer fifth region'
+    forcontu_bootstrap_region_class_footer_fifth:
+      type: string
+      label: 'Classes for Footer fifth region'
+
+    # Sidebar position.
+    # ----------------------------
+    forcontu_bootstrap_sidebar_position:
+      type: string
+      label: 'Sidebar position'
+    forcontu_bootstrap_content_offset:
+      type: integer
+      label: 'Content offset'
+
+    # Sidebar first layout.
+    # ----------------------------
+    forcontu_bootstrap_sidebar_collapse:
+      type: integer
+      label: 'Sidebar collapse'
+    forcontu_bootstrap_sidebar_first_width:
+      type: integer
+      label: 'Sidebar first width'
+    forcontu_bootstrap_sidebar_first_offset:
+      type: integer
+      label: 'Sidebar first offset'
+
+    # Sidebar second layout.
+    # ----------------------------
+    forcontu_bootstrap_sidebar_second_width:
+      type: integer
+      label: 'Sidebar second width'
+    forcontu_bootstrap_sidebar_second_offset:
+      type: integer
+      label: 'Sidebar second layout'
+
+    # Node.
+    # ----------------------------
+    forcontu_bootstrap_hide_node_label:
+      type: integer
+      label: 'Hide node label'
+
+    # Breadcrumb
+    # ----------------------------
+    forcontu_bootstrap_breadcrumb_divider:
+      type: string
+      label: 'Breadcrumb Divider'
+
+    # Buttons.
+    # ----------------------------
+    forcontu_bootstrap_button:
+      type: integer
+      label: 'Convert input submit to button element'
+    forcontu_bootstrap_button_size:
+      type: string
+      label: 'Default button size'
+    forcontu_bootstrap_button_type:
+      type: string
+      label: 'Default button type'
+    forcontu_bootstrap_button_outline:
+      type: integer
+      label: 'Button with outline format'
+
+    # Navbar.
+    # ----------------------------
+    forcontu_bootstrap_navbar_container:
+      type: string
+      label: 'Navbar width container'
+    forcontu_bootstrap_navbar_toggle:
+      type: string
+      label: 'Navbar toggle size'
+    forcontu_bootstrap_navbar_top_navbar:
+      type: integer
+      label: 'Navbar top is navbar'
+    forcontu_bootstrap_navbar_top_class:
+      type: string
+      label: 'Class for navbar top'
+    forcontu_bootstrap_navbar_class:
+      type: string
+      label: 'Class for navbar'
+    forcontu_bootstrap_navbar_top_position:
+      type: string
+      label: 'Navbar top position'
+    forcontu_bootstrap_navbar_top_color:
+      type: string
+      label: 'Navbar top link color'
+    forcontu_bootstrap_navbar_top_background:
+      type: string
+      label: 'Navbar top background color'
+    forcontu_bootstrap_navbar_position:
+      type: string
+      label: 'Navbar position'
+    forcontu_bootstrap_navbar_color:
+      type: string
+      label: 'Navbar link color'
+    forcontu_bootstrap_navbar_background:
+      type: string
+      label: 'Navbar background color'
+    forcontu_bootstrap_navbar_flyout:
+      type: boolean
+      label: 'Flyout style main menu'
+    forcontu_bootstrap_navbar_slide:
+      type: boolean
+      label: 'Sliding navbar'
+    forcontu_bootstrap_navbar_offcanvas:
+      type: string
+      label: 'Navbar offcanvas'
+
+    # Messages.
+    # ----------------------------
+    forcontu_bootstrap_messages_widget:
+      type: string
+      label: 'Messages widget'
+    forcontu_bootstrap_messages_widget_toast_delay:
+      type: integer
+      label: Toast delay
+
+    # Form.
+    # ----------------------------
+    forcontu_bootstrap_float_label:
+      type: string
+      label: 'Float Labels'
+    forcontu_bootstrap_checkbox:
+      type: string
+      label: 'Checkbox & Radio Style'
+
+    # Affix.
+    # ----------------------------
+    forcontu_bootstrap_navbar_top_affix:
+      type: integer
+      label: 'Affix navbar top'
+    forcontu_bootstrap_navbar_affix:
+      type: integer
+      label: 'Affix navbar'
+    forcontu_bootstrap_sidebar_first_affix:
+      type: integer
+      label: 'Affix sidebar first'
+    forcontu_bootstrap_sidebar_second_affix:
+      type: integer
+      label: 'Affix sidebar first'
+
+    # Scrollspy.
+    # ----------------------------
+    forcontu_bootstrap_scroll_spy:
+      type: string
+      label: 'Scrollspy element ID'
+
+    # Fonts.
+    # ----------------------------
+    forcontu_bootstrap_google_fonts:
+      type: string
+      label: 'Google Fonts combination'
+
+    # Icons.
+    # ----------------------------
+    forcontu_bootstrap_bootstrap_icons:
+      type: integer
+      label: 'Use Bootstrap icons'
+    forcontu_bootstrap_icons:
+      type: string
+      label: 'Icon set'
+
+    # System messages.
+    # ----------------------------
+    forcontu_bootstrap_system_messages:
+      type: string
+      label: 'System messages color scheme'
+
+    # Tables.
+    # ----------------------------
+    forcontu_bootstrap_table_style:
+      type: string
+      label: 'Table cell style'
+    forcontu_bootstrap_table_hover:
+      type: integer
+      label: 'Hover effect over table cells'
+    forcontu_bootstrap_table_head:
+      type: string
+      label: 'Table header color scheme'
+
+    # Image fluid.
+    # ----------------------------
+    forcontu_bootstrap_image_fluid:
+      type: boolean
+      label: 'Apply img-fluid style to all content images'
+
+    # Tabs.
+    # ----------------------------
+    forcontu_bootstrap_tabs_style:
+      type: string
+      label: 'Tabs style'
+
+    # Colors.
+    # ----------------------------
+    forcontu_bootstrap_enable_color:
+      type: boolean
+      label: 'Enable color Sheme'
+    forcontu_bootstrap_color_scheme:
+      type: string
+      label: 'Barrio Color Scheme'
+    forcontu_bootstrap_base_primary_color:
+      type: string
+      label: 'Primary base color'
+    forcontu_bootstrap_base_secondary_color:
+      type: string
+      label: 'Secondary base color'
+    forcontu_bootstrap_body_color:
+      type: string
+      label: 'Body color'
+    forcontu_bootstrap_body_bg_color:
+      type: string
+      label: 'Body Background Color'
+    forcontu_bootstrap_h1_color:
+      type: string
+      label: 'H1 color'
+    forcontu_bootstrap_h2_color:
+      type: string
+      label: 'H2 color'
+    forcontu_bootstrap_h3_color:
+      type: string
+      label: 'H3 color'

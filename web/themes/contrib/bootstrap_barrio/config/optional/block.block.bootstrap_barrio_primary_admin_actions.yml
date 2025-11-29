@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - bootstrap_barrio
+    - forcontu_bootstrap
 id: bootstrap_barrio_primary_admin_actions
-theme: bootstrap_barrio
+theme: forcontu_bootstrap
 region: content
 weight: -6
 provider: null

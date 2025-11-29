@@ -39,7 +39,7 @@ const paths = {
   js: {
     bootstrap: './node_modules/bootstrap/dist/js/bootstrap.min.js',
     popper: './node_modules/@popperjs/core/dist/umd/popper.min.js',
-    barrio: '../../contrib/bootstrap_barrio/js/barrio.js',
+    barrio: '../../contrib/forcontu_bootstrap/js/barrio.js',
     dest: './js',
   },
 };
@@ -53,7 +53,7 @@ function styles() {
       sass({
         includePaths: [
           './node_modules/bootstrap/scss',
-          '../../contrib/bootstrap_barrio/scss',
+          '../../contrib/forcontu_bootstrap/scss',
         ],
       }).on('error', sass.logError)
     )

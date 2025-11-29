@@ -5,7 +5,7 @@ echo '
 +------------------------------------------------------------------------+
 | With this script you could quickly create barrio sub-theme             |
 | In order to use this:                                                  |
-| - bootstrap_barrio theme (this folder) should be in the contrib folder |
+| - forcontu_bootstrap theme (this folder) should be in the contrib folder |
 +------------------------------------------------------------------------+
 '
 echo 'The machine name of your custom theme? [e.g. mycustom_barrio]'
