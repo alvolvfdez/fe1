@@ -1,0 +1,12 @@
+.sidebar {
+  margin-top: $spacer;
+  .block {
+    @extend .border;
+    @extend .border-primary;
+    @extend .rounded;
+    border-style: solid;
+    border-width: $border-width;
+    padding: $spacer $spacer;
+    background-color: $block-background;
+  }
+}
