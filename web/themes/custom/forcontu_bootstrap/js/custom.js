@@ -7,7 +7,7 @@
 
   'use strict';
 
-  Drupal.behaviors.bootstrap_sass = {
+  Drupal.behaviors.forcontu_bootstrap = {
     attach: function(context, settings) {
 
       // Custom code here

@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - bootstrap_sass
-id: bootstrap_sass_search_form_narrow
-theme: bootstrap_sass
+    - forcontu_bootstrap
+id: forcontu_bootstrap_search_form_narrow
+theme: forcontu_bootstrap
 region: sidebar_first
 weight: -7
 provider: null

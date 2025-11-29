@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - bootstrap_sass
-id: bootstrap_sass_primary_admin_actions
-theme: bootstrap_sass
+    - forcontu_bootstrap
+id: forcontu_bootstrap_primary_admin_actions
+theme: forcontu_bootstrap
 region: content
 weight: -6
 provider: null

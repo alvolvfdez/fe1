@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - bootstrap_sass
-id: bootstrap_sass_help
-theme: bootstrap_sass
+    - forcontu_bootstrap
+id: forcontu_bootstrap_help
+theme: forcontu_bootstrap
 region: highlighted
 weight: -2
 provider: null

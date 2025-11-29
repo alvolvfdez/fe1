@@ -6,9 +6,9 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap_sass
-id: bootstrap_sass_main_menu
-theme: bootstrap_sass
+    - forcontu_bootstrap
+id: forcontu_bootstrap_main_menu
+theme: forcontu_bootstrap
 region: primary_menu
 weight: -6
 provider: null

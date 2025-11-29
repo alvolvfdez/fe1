@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - bootstrap_sass
-id: bootstrap_sass_breadcrumbs
-theme: bootstrap_sass
+    - forcontu_bootstrap
+id: forcontu_bootstrap_breadcrumbs
+theme: forcontu_bootstrap
 region: breadcrumb
 weight: 0
 provider: null
