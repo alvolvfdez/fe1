@@ -12,7 +12,7 @@
   width: 24px;
   height: 24px;
   margin: 0 9px 0 0; /* LTR */
-  background-image: url(/themes/contrib/forcontu_bootstrap/images/icons/forum-icons.png);
+  background-image: url(/themes/custom/forcontu_bootstrap/images/icons/forum-icons.png);
   background-repeat: no-repeat;
 }
 [dir="rtl"] .forum__icon {
