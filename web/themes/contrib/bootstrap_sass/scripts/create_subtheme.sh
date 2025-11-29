@@ -14,10 +14,10 @@ read CUSTOM_BOOTSTRAP_SASS
 echo 'Your theme name ? [e.g. My custom bootstrap_sass]'
 read CUSTOM_BOOTSTRAP_SASS_NAME
 
-if [[ ! -e ../../custom ]]; then
-    mkdir ../../custom
+if [[ ! -e ../../../custom ]]; then
+    mkdir ../../../custom
 fi
-cd ../../custom
+cd ../../../custom
 cp -r ../contrib/bootstrap_sass $CUSTOM_BOOTSTRAP_SASS
 cd $CUSTOM_BOOTSTRAP_SASS
 for file in *bootstrap_sass.*; do mv $file ${file//bootstrap_sass/$CUSTOM_BOOTSTRAP_SASS}; done
