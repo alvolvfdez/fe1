@@ -1,0 +1,34 @@
+// Colores base - DEFINIR PRIMERO
+$white: #fff;
+$black: #000;
+
+// Colores principales
+$primary-shade: #FFC108;
+$primary-light: tint-color($primary-shade, 37%);
+$primary-dark: shade-color($primary-shade, 12%);
+$accent-shade: #7A4480;
+$accent-light: tint-color($accent-shade, 37%);
+$accent-dark: shade-color($accent-shade, 12%);
+
+// Colores semanticos
+$red: #dc3545;
+$yellow: #ffc107;
+$green: #28a745;
+$cyan: #17a2b8;
+$gray-100: #f8f9fa;
+$gray-800: #343a40;
+
+// Variables de tema
+$primary: $accent-shade;
+$secondary: $primary-shade;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
+
+// Configuracion
+$enable-responsive-font-sizes: true;
+$enable-shadows: false;
+$enable-gradients: false;

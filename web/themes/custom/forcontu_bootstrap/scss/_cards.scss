@@ -1,0 +1,11 @@
+.card {
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-base;
+  @include transition(transform, 0.2s);
+
+  &:hover {
+    transform: translateY(-4px);
+    @include box-shadow-hover;
+  }
+}

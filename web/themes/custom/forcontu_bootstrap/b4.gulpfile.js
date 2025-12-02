@@ -32,7 +32,7 @@ const paths = {
     jquery: './node_modules/jquery/dist/jquery.min.js',
     popper: './node_modules/popper.js/dist/umd/popper.min.js',
     poppermap: './node_modules/popper.js/dist/umd/popper.min.js.map',
-    barrio: '../../custom/bootstrap_barrio/js/barrio.js',
+    barrio: '../../contrib/bootstrap_barrio/js/barrio.js',
     dest: './js'
   }
 }
@@ -44,7 +44,7 @@ function styles () {
     .pipe(sass({
       includePaths: [
         './node_modules/bootstrap/scss',
-        '../../custom/bootstrap_barrio/scss'
+        '../../contrib/bootstrap_barrio/scss'
       ]
     }).on('error', sass.logError))
     .pipe($.postcss(postcssProcessors))

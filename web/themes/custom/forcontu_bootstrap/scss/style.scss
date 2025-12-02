@@ -1,60 +1,558 @@
-/* 
-Theme Name: Bootstrap 4 Sass
-Description: Bootstrap 4 with Sass
-*/
+// 1. Primero las funciones de Bootstrap
+@import "../node_modules/bootstrap/scss/functions";
 
-// import files
-@import "import";
+// 2. Luego las variables de Bootstrap
+@import "../node_modules/bootstrap/scss/variables";
 
-/* GENERAL STYLES
--------------------------------------------------*/
+// 3. Luego los maps de Bootstrap (necesario para Bootstrap 5.3+)
+@import "../node_modules/bootstrap/scss/maps";
 
-body {
-    background: $white;
+// 4. Luego los mixins de Bootstrap
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 5. AHORA importa tus variables personalizadas
+@import "variables";
+
+// 6. Importar componentes especificos de Bootstrap que necesitas
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 7. Tus variables de layout personalizadas
+$sidebar-width: 25%;
+$main-content-width: 50%;
+$grid-gap: 30px;
+$half-gap: $grid-gap / 2;
+
+$sidebar-left-bg: #f6fbff;
+$sidebar-left-border: #cfe7ff;
+$sidebar-left-accent: #1e6fb8;
+
+$sidebar-right-bg: #fff8f3;
+$sidebar-right-border: #ffdfc9;
+$sidebar-right-accent: #c85a00;
+
+$block-radius: 12px;
+$block-padding: 1rem;
+$block-border-width: 1px;
+$block-transition: 150ms ease;
+
+/* Estilos para el bloque de contenido personalizado */
+#block-forcontu-bootstrap-contenidopersonalizado {
+  background-color: #f0f8ff; /* Fondo azul muy claro */
+  border: 2px solid #1e6fb8; /* Borde azul intenso */
+  border-radius: 16px;       /* Esquinas redondeadas */
+  padding: 1rem;
+
+  h2 {
+    color: #1e6fb8;           /* Color del titulo */
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+
+  .content {
+    p {
+      line-height: 1.6;
+      color: #343a40;         /* Color del texto */
+    }
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: #d0e6ff; /* Fondo mas claro al hover */
+    border-color: darken(#1e6fb8, 10%);
+    box-shadow: 0 6px 18px rgba(30,111,184,0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+/* Radios inline para campo Tags */
+#edit-field-tags {
+  display: flex;
+  flex-wrap: wrap; /* permite que bajen a la siguiente linea si no caben */
+  gap: 1rem;       /* espacio entre radios */
+
+  .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* elimina margen inferior extra */
+    
+    .form-check-input {
+      margin-right: 0.3rem; /* separa el input del label */
+    }
+
+    .form-check-label {
+      margin: 0; /* asegura que el label no tenga margen extra */
+    }
+  }
 }
 
 
-/* COLORS 
---------------------------------------------------*/
+
+// 8. Estilos generales
+body {
+  background: $white;
+}
 
 a {
-    color: $accent-shade;
+  color: $accent-shade;
 }
 
 .bg-inverse {
-    background: $primary-shade !important;
+  background: $primary-shade !important;
 }
 
 .site-footer {
-    background: $accent-shade !important;
+  background: $accent-shade !important;
 }
 
-.menu--main li a {
-    color: $primary-shade;
-}
-
+.menu--main li a,
 .menu--account li a {
-    color: $primary-shade;
+  color: $primary-shade;
 }
 
 .site-name-slogan a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .card-group img {
-    margin: 0;
-    width: 100%;
-    height: auto;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
 
 .card-group .field--type-image {
-    margin: 0
+  margin: 0;
 }
 
 .slick {
-    width: 100%;
+  width: 100%;
 }
 
-.slick>div {
-    margin: 0 15px;
+.slick > div {
+  margin: 0 15px;
+}
+
+// 9. Contenedor principal
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$half-gap;
+  margin-right: -$half-gap;
+  position: relative;
+
+  &.row-offcanvas-left {
+    @include media-breakpoint-down(md) {
+      .sidebar_first {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        z-index: 1050;
+        background: white;
+        overflow-y: auto;
+        width: 280px;
+      }
+
+      &.active {
+        .sidebar_first {
+          transform: translateX(0);
+        }
+        
+        &::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.5);
+          z-index: 1040;
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  flex: 0 0 $main-content-width;
+  max-width: $main-content-width;
+  padding: 0 $half-gap;
+  order: 2;
+
+  @include media-breakpoint-down(md) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    order: 1;
+  }
+}
+
+.sidebar {
+  padding: 0 $half-gap;
+
+  &_first {
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
+    order: 1;
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order: 2;
+      margin-top: $grid-gap;
+      position: static;
+      height: auto;
+      width: 100%;
+      transform: none;
+    }
+  }
+
+  &_second {
+    flex: 0 0 $sidebar-width;
+    max-width: $sidebar-width;
+    order: 3;
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order: 3;
+      margin-top: $grid-gap;
+    }
+  }
+}
+
+// 10. Bloques en sidebars
+.region-sidebar-first .block,
+.region-sidebar-second .block {
+  padding: $block-padding;
+  border-radius: $block-radius;
+  border-style: solid;
+  border-width: $block-border-width;
+  transition: transform $block-transition, box-shadow $block-transition, border-color $block-transition;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  margin-bottom: 1rem;
+  background-clip: padding-box;
+}
+
+.region-sidebar-first .block {
+  background: $sidebar-left-bg;
+  border-color: $sidebar-left-border;
+
+  .block__title, .block-title {
+    color: $sidebar-left-accent;
+    font-weight: 600;
+    border-bottom: 2px solid lighten($sidebar-left-accent, 40%);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &:hover, &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30,111,184,0.12);
+    border-color: darken($sidebar-left-border, 8%);
+  }
+}
+
+.region-sidebar-second .block {
+  background: $sidebar-right-bg;
+  border-color: $sidebar-right-border;
+
+  .block__title, .block-title {
+    color: $sidebar-right-accent;
+    font-weight: 600;
+    border-bottom: 2px solid lighten($sidebar-right-accent, 40%);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &:hover, &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200,90,0,0.12);
+    border-color: darken($sidebar-right-border, 8%);
+  }
+}
+
+.region-sidebar-first .block:focus-within,
+.region-sidebar-second .block:focus-within {
+  outline: 2px solid rgba(100,150,255,0.3);
+  outline-offset: 2px;
+}
+
+.region-sidebar-first .block .title,
+.region-sidebar-second .block .title {
+  margin-bottom: 0.75rem;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row-offcanvas-left .sidebar_first,
+  .region-sidebar-first .block,
+  .region-sidebar-second .block {
+    transition: none;
+  }
+}
+
+// 11. Estilos para titulos de bloques
+
+#block-forcontu-bootstrap-contenidopersonalizado {
+  // Solo aplicamos estilo al h2 directo del bloque
+  > h2 {
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #f2f2f7;
+    color: #333;
+    border-radius: 8px;
+
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Ocultar la columna derecha en pantallas menores a 768px
+@media (max-width: 767px) {
+  .region-sidebar-second,
+  .sidebar-second {
+    display: none !important;
+  }
+}
+
+// Botones mas grandes y sin outline
+button,
+input[type="submit"],
+.btn,
+.button,
+.form-submit {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+
+  // Quitamos versiones outline
+  &.btn-outline-primary,
+  &.btn-outline-secondary,
+  &.btn-outline-success,
+  &.btn-outline-danger,
+  &.btn-outline-warning,
+  &.btn-outline-info,
+  &.btn-outline-light,
+  &.btn-outline-dark {
+    border: 1px solid transparent;
+    background-color: currentColor;
+    color: #fff;
+  }
+}
+
+button.btn,
+.button.btn,
+.form-submit.btn,
+.btn {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+}
+
+button.btn-primary,
+.button.btn-primary,
+.form-submit.btn-primary,
+.btn-primary {
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+}
+
+/* Estilos para el que los enlaces del menu se vean blancos */
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+
+/* Estilos para que la tabla cumpla con los criterios del ejercicio */
+
+.table.cols-3 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+
+  thead th {
+    background: #1f2937; // gris carbon suave
+    color: #fff;
+    padding: 0.9rem 1rem;
+    font-weight: 600;
+    text-align: left;
+    border-bottom: 2px solid #374151;
+  }
+
+  tbody tr {
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+
+  // alternancia sutil
+  tbody tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  tbody td {
+    padding: 0.9rem 1rem;
+    border: none;
+  }
+
+  // hover moderno
+  tbody tr:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+}
+
+
+/* Estilos para la card del tipo de contenido */
+// ===== CARD BLOCK (Views Bootstrap) =====
+#block-forcontu-bootstrap-views-block-card-block-1 {
+  padding: 1rem 0;
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    color: #1d1d1f;
+  }
+
+  .card-group {
+    display: flex;
+    justify-content: center;
+
+    .card {
+      max-width: 420px;
+      width: 100%;
+      border: none;
+      border-radius: 14px;
+      overflow: hidden;
+
+      background: #ffffff;
+      box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow:
+          0 8px 22px rgba(0, 0, 0, 0.08),
+          0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      // Enlace del tipo de contenido (fuera o dentro del header)
+      > a {
+        display: block;
+        padding: .75rem 1rem .25rem 1rem;
+        font-size: .85rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        color: #6c63ff;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .card-header {
+        background: #f7f7f9;
+        border-bottom: 1px solid #ececec;
+        padding: .9rem 1rem;
+
+        a {
+          font-size: 1.15rem;
+          font-weight: 600;
+          color: #212529;
+          text-decoration: none;
+          transition: color .15s ease;
+
+          &:hover {
+            color: #6c63ff;
+          }
+        }
+      }
+
+      .card-body {
+        padding: 1rem;
+
+        // Tipo de contenido dentro del body
+        > a {
+          font-size: .9rem;
+          color: #6c63ff;
+          font-weight: 500;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  // Contextual links (cuando el usuario tiene permisos)
+  .contextual {
+    button.trigger {
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/* Limpiamos el bloque de la card */
+
+#block-forcontu-bootstrap-views-block-card-block-1 {
+    padding: 1rem 0;
+    border: 0px solid;
+}
+
+/* ESTILOS CUSTOM */
+
+.sidebar {
+  margin-top: $spacer;
+
+  .block {
+    border-style: solid;
+    border-width: $border-width;
+    @extend .bg-light;
+    @extend .rounded;
+    @extend .border-danger;
+    @extend .border;
+    @extend .border-2;
+  }
+}
+
+
+.block {
+  h2 {
+    text-shadow: none;
+  }
+}
+
+.sidebar_second {
+  @extend .d-none;
+  
+
+  @media (min-width: 768px) {
+    @extend .d-md-block;
+  }
 }

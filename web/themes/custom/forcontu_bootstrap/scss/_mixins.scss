@@ -1,0 +1,7 @@
+@mixin transition($property: all, $time: 0.3s, $ease: ease) {
+  transition: $property $time $ease;
+}
+
+@mixin box-shadow-hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
